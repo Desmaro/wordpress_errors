@@ -1,0 +1,9 @@
+ERROR ZLIB COMPRESSION:
+
+Notice: ob_end_flush(): failed to send buffer of zlib output compression (1) in /xxxx//wp-includes/functions.php on line 3721
+
+SOLUCION:
+
+remove_action( 'shutdown', 'wp_ob_end_flush_all', 1 );
+
+EN el functions.php del theme activo
